@@ -7,7 +7,7 @@ This project was developed using HTML, CSS and Javascript.
 
 I used the [UIKit](https://getuikit.com/) Front End Framework to develop the web interface a little bit faster.
 
-The helpful [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method was used to filter the array of ID numbers, based on the user input.
+The helpful [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method was used to filter the ID numbers array based on user input.
 
 Once 10 digits are typed and the search button is clicked a message is displayed to inform the user about the results and if further actions are needed. 
 
