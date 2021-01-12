@@ -1,4 +1,5 @@
 # ID Number verification
+
 A web app put together to check Ecuadorian ID numbers against a list of IDs that were submitted supporting a petition for a popular referendum about the future of Yasuni National Park and Reserve. 
 The mentioned IDs were wrongly rejected, stopping the petition from being accepted.
 
@@ -9,3 +10,6 @@ I used the [UIKit](https://getuikit.com/) Front End Framework to develop the web
 The helpful [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method was used to filter the array of ID numbers, based on the user input.
 
 Once 10 digits are typed and the search button is clicked a message is displayed to inform the user about the results and if further actions are needed. 
+
+
+![Web Screenshot](/screenshot.jpg "Web Screenshot")
