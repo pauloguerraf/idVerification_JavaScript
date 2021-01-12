@@ -40,7 +40,7 @@ export function init() {
             matches = uniqueList.length;
         switch (true) {
             case (matches === 0 && textInput.value.length===10):
-            msg = 'Tu firma no presenta problemas. Gracias por tu ayuda.'
+            msg = 'Tu firma no se encuentra entre las rechazadas en la última etapa de verificación de firmas, sin embargo, esto no signfica que haya sido considerada valida, pues tu firma puede haber sido anulada en etapas previas, donde anularon más del 30% de firmas por cuestiones de forma, como el gramaje del papel, tamaño del formulario, etc.'
             countMessage.className = 'count-message uk-h4 uk-text-left uk-text-success uk-text-bold uk-text'
             divPaso2.style.display = 'none'
             divPaso2.style.height = '0px'
