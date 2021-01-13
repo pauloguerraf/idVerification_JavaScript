@@ -11,7 +11,7 @@ The helpful [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 
 Once 10 digits are typed and the search button is clicked a message is displayed to inform the user about the results and if further actions are needed. 
 
-Code was bundled using [Parcel](https://parceljs.org/)
+The production version of the project was bundled using [Parcel](https://parceljs.org/)
 
 
 ![Project Screenshot](/screenshot.jpg "Project Screenshot")
