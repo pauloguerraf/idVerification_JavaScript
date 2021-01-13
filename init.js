@@ -1,10 +1,10 @@
-import data from './0001.json'
+import {fetchData} from './data-service.js'
 
 console.clear();
 
 export function init() {
 
-    var list = [],
+     var list = [],
         dataList = [],
         filteredList = [],
         maxDisplayLimit = 0,
@@ -12,25 +12,31 @@ export function init() {
         displayList = document.querySelector('.list'),
         countMessage = document.querySelector('.count-message'),
         btnBuscar = document.querySelector('#btn-buscar'),
-        divPaso2= document.querySelector('#paso-2')
+        divPaso2 = document.querySelector('#paso-2')
+        
+    const data = JSON.parse(fetchData())
+    
+    textInput.value=""
 
-                textInput.value=""
 
-        document.onreadystatechange = function() { 
-            if (document.readyState !== "complete") { 
-                document.querySelector("body").style.visibility = "hidden"; 
-                document.querySelector(".loader-container").style.visibility = "visible"; 
-            } else { 
-                document.querySelector(".loader-container").style.display = "none"; 
-                document.querySelector("body").style.visibility = "visible"; 
-            } 
-            
+    document.onreadystatechange = function() { 
+        if (document.readyState !== "complete") { 
+            document.querySelector("body").style.visibility = "hidden"; 
+            document.querySelector(".loader-container").style.visibility = "visible"; 
+        } else { 
+            document.querySelector(".loader-container").style.display = "none"; 
+            document.querySelector("body").style.visibility = "visible"; 
         } 
+        btnBuscar.addEventListener('click', getFilteredItems)
+        generateDataList()
+        getFilteredItems()
+        getFilteredItems(null)
+    } 
     
     function generateDataList() {
         if (!data) return
         for (var i = 0; i < data.length; i++) {
-            list.push(data[i].w9c18cajl10.toString())
+            list.push(data[i].a.toString())
         }
     }
 
@@ -99,9 +105,6 @@ export function init() {
         generateList();
     }
 
-    //textInput.addEventListener('keyup', getFilteredItems);
     btnBuscar.addEventListener('click', getFilteredItems);
-    generateDataList()
-    getFilteredItems()
-    getFilteredItems(null)
+    
 };
