@@ -52,7 +52,7 @@ export function init() {
             divPaso2.style.height = '0px'
             break;
             case (matches === 1 && textInput.value.length===10):
-            msg = 'Tu firma consta como ' + 'ANULADA' + ' en la etapa de verificación de firmas. Por favor, continúa al paso 2.'
+            msg = 'Tu firma consta como ' + 'RECHAZADA' + ' en la etapa de verificación de firmas. Por favor, continúa al paso 2.'
             countMessage.className = 'count-message uk-h4 uk-text-left uk-text-danger uk-text-bold uk-text'
             divPaso2.style.display = 'block'
             divPaso2.style.height = 'auto'
