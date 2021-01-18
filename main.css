@@ -120,3 +120,9 @@ body {
   display: none;
   height: 0px;
 }
+#banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./banner.png);
+  object-fit: contain;
+  background-position: center;
+  min-height: 50vh;
+}
