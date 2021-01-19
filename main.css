@@ -6,6 +6,9 @@ body {
   font-family:sans-serif;
   margin:0;
 }
+.tm-page{
+  visibility: hidden;
+}
 .container {
   background-color:#fff;
   border:solid 1px #ccc;
@@ -33,15 +36,7 @@ body {
   z-index: 10;
   background:#fff;
 }
-#loader { 
-    border: 12px solid #f3f3f3; 
-    border-radius: 50%; 
-    border-top: 12px solid #444444; 
-    width: 70px; 
-    height: 70px; 
-    animation: spin 1s linear infinite; 
-    background-color: #fff;
-} 
+
   
 @keyframes spin { 
     100% { 
@@ -121,8 +116,66 @@ body {
   height: 0px;
 }
 #banner{
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./banner.png);
-  object-fit: contain;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./banner.jpg);
   background-position: center;
   min-height: 50vh;
+  background-size: cover;
 }
+#banner .cont{
+  width: 100%;
+  height: 100%;
+  backdrop-filter: grayscale(0.5);
+  text-align: center;
+}
+#banner .cont h1{
+  position: relative;
+  top: 50%;
+}
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 124px;
+  height: 124px;
+  margin: 50vh 50%;
+  border: 10px solid #1B9BD3;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #1B9BD3 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* #loader { 
+    border: 12px solid #f3f3f3; 
+    border-radius: 50%; 
+    border-top: 12px solid #444444; 
+    width: 70px; 
+    height: 70px; 
+    animation: spin 1s linear infinite; 
+    background-color: #fff;
+}  */
